@@ -34,7 +34,8 @@ Gplan.CarregarMapa = (function() {
 			
 		}
 	}
-
+	//função que eu to passando o objeto pra tratar e dividir ele consigo pegar dentro dela o id e os municipoios(o objeto e um territorio do rn, ai dele tem id e municipios que compoem)
+	//to conseguinto separar, minha duvida e da nomeclatura pra chama ele fora da função com os dados separados 
 	function onMunicipiosRecuperados(territorios){
 		territorios.forEach(function(territorio) {
 			this.tabela.append(territorio.id);
@@ -47,7 +48,7 @@ Gplan.CarregarMapa = (function() {
 	}
 	
 	
-
+	// essa e a consulta ajax to recuperando o objeto do BD e passando por uma função pra tratar o objeto e separar ele 
 	function onRenderiseMapa(geojson) {
 		// Initiate the chart
 
@@ -56,6 +57,7 @@ Gplan.CarregarMapa = (function() {
 			method: 'GET',
 			contentType: 'application/json'
 		});
+		//essa e a função que eu estou passando o objeto 
 		retorno.done(onMunicipiosRecuperados.bind(this));
 		console.log(retorno);
 		
