@@ -47,7 +47,7 @@ var data = [
         data: data,
         keys: ['name', 'id'],
         joinBy: 'name',
-        name: 'Territorios',
+        name: 'TerritoriosAL',
         states: {
           hover: {
             color: '#a4edba'
